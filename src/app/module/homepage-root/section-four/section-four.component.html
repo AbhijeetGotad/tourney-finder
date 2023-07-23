@@ -1,0 +1,26 @@
+<div fxLayout="column" class="section-four-page grid-layout-column">
+  <div class="header-title text-center mb-24">
+    {{ title || "-" }}
+  </div>
+  <div class="header-sub-title mb-52">
+    {{ subTitle || "-" }}
+  </div>
+  <div fxLayout="column" class="grid-layout-column">
+    <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="stretch stretch" ngClass.xs="grid-layout-column" ngClass.gt-xs="grid-layout-row-wrap-3n"
+    >
+      <div *ngFor="let item of items; let index = index">
+        <div class="white-card" fxLayout="column" fxLayoutGap="16px">
+          <img class="display-card" [src]="item.img" alt="Logo" />
+          <div fxLayout="column" fxLayoutGap="4px" class="plr-15">
+            <div class="display-text-title small-text">
+              {{ item.title || "-" }}
+            </div>
+            <div class="display-text-sub-title">
+              {{ item.subTitle || "-" }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

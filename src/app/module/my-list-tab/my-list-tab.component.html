@@ -1,0 +1,21 @@
+<mat-card fxLayout="row" fxFlex="`100" class="welcome-title-center" fxLayoutAlign="space-between start"
+    fxLayoutGap="5px">
+    <mat-tab-group class="circular-tab-bordered" mat-stretch-tabs="false" mat-align-tabs="start">
+        <mat-tab label="My Competitions list">
+            <div><app-competition-list></app-competition-list></div>
+        </mat-tab>
+        <mat-tab label="My Turfs List"><app-competition-list></app-competition-list></mat-tab>
+    </mat-tab-group>
+
+    <div fxLayout="column" fxFlex="20" fxLayoutGap="5px" fxLayoutAlign="space-between center">
+        <mat-card fxLayout="column" fxLayoutAlign="center center" class="cursor-pointer" (click)="addNewCompetition()"
+            fxFlex>
+            <img class="display-img" src="assets/images/gif/add-new-competition.gif" alt="add-new-competition">
+            <div class="display-title">Upload Competition</div>
+        </mat-card>
+        <mat-card fxLayout="column" fxLayoutAlign="center center" class="cursor-pointer" (click)="addNewTurf()" fxFlex>
+            <img class="display-img" src="assets/images/gif/add-new-competition.gif" alt="add-new-competition">
+            <div class="display-title">Upload Turf</div>
+        </mat-card>
+    </div>
+</mat-card>

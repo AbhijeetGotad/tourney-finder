@@ -1,0 +1,49 @@
+.message-modal-container .cdk-overlay-pane.my-dialog {
+  position: relative !important;
+}
+.message-modal-container .close.mat-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px;
+  line-height: 14px;
+  min-width: auto;
+}
+::ng-deep .mat-dialog-container {
+  position: relative;
+}
+/* .message-modal-container .icon-placeholder {
+  text-align: left;
+} */
+.message-modal-container .ico-large {
+  margin-right: 5px !important;
+}
+.message-modal-container .warning-icon {
+  height: 76px;
+  width: 69px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  background-size: 100%;
+  background-position: center;
+  background-image: url(../../../../../../src/assets/images/svg/warning-ico.svg);
+}
+
+.message-modal-container .success-icon {
+  height: 76px;
+  width: 69px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  background-size: 100%;
+  background-position: center;
+  background-image: url(../../../../../../src/assets/images/svg/success-ico.svg);
+}
+
+.message-modal-container .info-icon {
+  height: 76px;
+  width: 69px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  background-size: 100%;
+  background-position: center;
+  background-image: url(../../../../../../src/assets/images/info-icon.png);
+}

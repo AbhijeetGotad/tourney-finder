@@ -1,0 +1,41 @@
+<div class="sidenav-container">
+  <mat-drawer-container autosize>
+    <mat-drawer #drawer [mode]="'side'" [opened]="true">
+      <mat-nav-list class="scrollable-content">
+        <mat-list-item *ngFor="let menuItem of menuList" (click)="gotoMenuLink(menuItem)"
+          routerLinkActive="active-nav-item" fxLayout="row" [ngClass]="menuItem.isActive == 0 ? 'disabled' : '' || selectedItem == menuItem.name ? 'active-nav-item' : ''" fxLayoutAlign="center center" class="mb-5">
+          <div fxLayout="column" fxLayoutAlign="center center">
+            <a *ngIf="!menuItem.icon" mat-list-icon [ngClass]="[menuItem.iconImage ? menuItem.iconImage : '']"></a>
+            <span mat-line fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="start center">
+              <span class="menu-text">{{ menuItem.displayName }}</span>
+            </span>
+          </div>
+        </mat-list-item>
+        <!-- <div class="bottom-side-menu" [ngClass]="isProduction ? 'disabled' : ''">
+           <mat-list-item fxLayout="row" fxLayoutAlign="center center" (click)="staticDataMenu('Learn', 'landing/learn')"
+            [ngClass]="selectedItem == 'Learn' ? 'active-nav-item' : ''">
+            <div fxLayout="column" fxLayoutAlign="center center">
+              <a mat-list-icon class="sidebar-ico learn-sidebar-ico"></a>
+              <span mat-line fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="start center">
+                <span class="menu-text">Learn</span>
+              </span>
+            </div>
+          </mat-list-item>
+          <mat-list-item fxLayout="row" fxLayoutAlign="center center"
+            (click)="staticDataMenu('Setting', 'landing/settings/admin-role')"
+            [ngClass]="selectedItem == 'Setting' ? 'active-nav-item' : ''">
+            <div fxLayout="column" fxLayoutAlign="center center">
+              <a mat-list-icon class="sidebar-ico settings-sidebar-ico"></a>
+              <span mat-line fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="start center">
+                <span class="menu-text">Setting</span>
+              </span>
+            </div>
+          </mat-list-item>
+        </div> -->
+      </mat-nav-list>
+    </mat-drawer>
+    <mat-drawer-content id="matDrawerContent">
+      <router-outlet></router-outlet>
+    </mat-drawer-content>
+  </mat-drawer-container>
+</div>

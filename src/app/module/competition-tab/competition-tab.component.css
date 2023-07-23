@@ -1,0 +1,19 @@
+.main-root {
+  height: calc(100vh - 112px) !important;
+  overflow: auto !important;
+  padding: 24px;
+}
+
+.sidebar-ico-img {
+  height: 32px;
+  width: 32px;
+  background-position: center;
+  padding: 0;
+  border-radius: 100%;
+}
+
+.active-game-tab {
+  border-radius: 10px;
+  margin: 0px 2px;
+  background-color: var(--bold-primary-60);
+}

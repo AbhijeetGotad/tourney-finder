@@ -1,0 +1,104 @@
+:root {
+    /* New Theme color pallate */
+
+    /* Purple / Midnight Color */
+    --primary-80 : #130028;
+    --primary-70 : #1F0042;
+    --primary-60 : #2B005C;
+    --primary-50 : #3E0084;
+    --primary-40 : #6D17CE;
+    --primary-30 : #CBA2FA;
+    --primary-20 : #F0E8FA;
+
+    /* Sky */
+    --secondary-80 : #001E2B;
+    --secondary-70 : #00364E;
+    --secondary-60 : #0C5273;
+    --secondary-50 : #0078AD;
+    --secondary-40 : #67C3EF;
+    --secondary-30 : #89DCFF;
+    --secondary-20 : #E5F1F7;
+
+    /* Orange */
+    --sparkle-80 : #46070B;
+    --sparkle-70 : #7B1604;
+    --sparkle-60 : #CD3D00;
+    --sparkle-50 : #FA7D19;
+    --sparkle-40 : #FFAA66;
+    --sparkle-30 : #FFD2AD;
+    --sparkle-20 : #FEF2E9;
+
+    --primary-inverse : #FFFFFF;
+    --secondary-inverse : #FFFFFF;
+    --sparkle-inverse : #46070B;
+    --background : #FFFFFF;
+    --grey-100 : #141414;
+    --grey-90 : #373737;
+    --grey-80 : #595959;
+    --grey-70 : #767676;
+    --grey-60 : #B5B5B5;
+    --grey-50 : #CACACA;
+    --grey-40 : #E0E0E0;
+    --grey-30 : #EBEBEB;
+    --grey-20 : #F5F5F5;
+    --grey-10 : #F9F9F9;
+
+    /* Global colors */
+    --global-white : #FFFFFF;
+    --global-black : #141414;
+    --global-error-80 : #660014;
+    --global-error-50 : #F50031;
+    --global-error-20 : #FEE6EA;
+    --global-warning-80 : #7D2F08;
+    --global-warning-50 : #F06D0F;
+    --global-warning-20 : #FEF0E7;
+    --global-success-80 : #135610;
+    --global-success-50 : #25AB21;
+    --global-success-20 : #E9F7E9;
+
+    --box-shadow-color: #0000001A;
+
+    /*old color codes */
+    --global-white: #ffffff;
+    --color-primary: #000093;
+    --color-light-primary-60: #000093;
+    --color-secondary: #959595;
+    --color-body-bg: #CACACA;
+    /* --success-color: #60a058; */
+    --link-color: #000093;
+    /* --error-color:#ED544E; */
+    --body-color: #141414;
+    --color-black: #000000;
+    /* --box-shadow-color: #0000001A; */
+    /* --grey-60:#e4e0e0; */
+    --modal-bg-color: #f6f6f6;
+    --modal-text-color: #43525B;
+    --color-dark-blue: #2352A9;
+    --table-border: rgba(0, 0, 0, 0.12);
+    /* --warning-color: #FFD23C; */
+    --outline-input-bg: #F2F2F2;
+    --avatar-bg-variant-1: #DAEFFF;
+    --avatar-bg-variant-2: #FFF9DE;
+    --avatar-bg-variant-3: #EAE4FF;
+    --table-bg:#F5F5F5;
+
+    /* Font Size */
+
+    --font-size-big-title: 40px; /* 40px --- 2.5em */
+    --font-size-big-head: 32px; /*32px --- 2em */
+    --font-size-head: 24px; /* 24px --- 1.714em */
+    --font-size-subhead: 22px; /* 22px --- 1.571em */
+    --font-size-big: 20px; /*20px --- 1.429em */
+    --font-size-title: 18px; /*18px --- 1.286em */
+    --font-size-sub-title: 16px; /*16px -- 1.143em */
+    --font-size-15: 15px; /* 15px --- 1.071em */
+    --font-size-body: 14px;  /*14px --- 1em */
+    --font-size-small: 13px; /* 13px --- 0.929em */
+    --font-size-mini: 12px; /* 12px --- 0.857em */
+    --font-size-11: 11px; /* 11px --- 0.786em */
+    --font-size-10: 10px; /* 10px --- 0.714em */
+    /* New Font Size */
+
+    /*font Familiy */
+    --font-familiy : Calibri;
+}

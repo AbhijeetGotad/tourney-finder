@@ -1,0 +1,153 @@
+<div fxLayout="column" fxLayoutAlign="space-between none" class="upload-audio-root">
+  <div fxLayout="row" fxLayoutAlign="space-between center" class="grid-layout-row header-modal-action">
+    <h2 mat-dialog-title class="no-margin header">Sign Up</h2>
+    <mat-icon mat-dialog-close class="cursor-pointer ico-small">close</mat-icon>
+  </div>
+  <div class="content-modal-action bottom-container scrollable-content">
+    <form fxLayout="column" [formGroup]="signupForm">
+      <div fxLayout="column" class="heading-section" fxLayoutAlign="flex-start flex-start">
+        <h1 class="extra-bolder heading no-margin">
+          Welcome,
+        </h1>
+        <p>Let's get started with few simple steps</p>
+      </div>
+
+      <div class="bottom-container" fxFlex fxLayout="column" fxLayoutAlign="flex-start flex-start">
+        <div fxLayout="column" class="bottom-container">
+
+
+          <div class="column" fxLayoutAlign="center stretch" fxLayout="column" class="grid-layout-column">
+
+            <div fxFlex="100" fxLayout.gt-xs="row" fxLayout.xs="column" fxLayoutGap="2%">
+              <div fxLayout="column" class="no-label" fxFlex.gt-xs="49" fxFlex.xs="100">
+                <mat-form-field>
+                  <mat-label>First Name</mat-label>
+                  <input matInput formControlName="firstName" (keyup)="clearError()" placeholder="Enter First Name" />
+                  <mat-error *ngIf="signupForm.controls['firstName'].invalid" class="mt-20">
+                    <div fxLayout="row">
+                      <mat-icon *ngIf="getErrorMessage('firstName')" class="mr-5">cancel</mat-icon>
+                      <p>{{ getErrorMessage("firstName") }}</p>
+                    </div>
+                  </mat-error>
+                </mat-form-field>
+              </div>
+              <div fxLayout="column" class="no-label" fxFlex.gt-xs="49" fxFlex.xs="100">
+                <mat-form-field>
+                  <mat-label>Last Name</mat-label>
+                  <input matInput formControlName="lastName" (keyup)="clearError()" placeholder="Enter Last Name" />
+                  <mat-error *ngIf="signupForm.controls['lastName'].invalid" class="mt-20">
+                    <div fxLayout="row">
+                      <mat-icon *ngIf="getErrorMessage('lastName')" class="mr-5">cancel</mat-icon>
+                      <p>{{ getErrorMessage("lastName") }}</p>
+                    </div>
+                  </mat-error>
+                </mat-form-field>
+              </div>
+            </div>
+
+            <div fxFlex="100" fxLayout.gt-xs="row" fxLayout.xs="column" fxLayoutGap="2%">
+              <div fxLayout="column" class="no-label" fxFlex.gt-xs="49" fxFlex.xs="100">
+                <mat-form-field>
+                  <mat-label>Email ID</mat-label>
+                  <input matInput formControlName="email" autocomplete="off" (keyup)="clearError()"
+                    placeholder="Enter Email ID" />
+                  <mat-error *ngIf="signupForm.controls['email'].invalid" class="mt-20">
+                    <div fxLayout="row">
+                      <mat-icon *ngIf="getErrorMessage('email')" class="mr-5">cancel</mat-icon>
+                      <p>{{ getErrorMessage("email") }}</p>
+                    </div>
+                  </mat-error>
+                </mat-form-field>
+              </div>
+              <div fxLayout="column" class="no-label" fxFlex.gt-xs="49" fxFlex.xs="100">
+                <mat-form-field>
+                  <mat-label>Password</mat-label>
+                  <input matInput [type]="hide ? 'password' : 'text'" formControlName="password" (keyup)="clearError()"
+                    autocomplete="off" />
+                  <mat-error *ngIf="signupForm.controls['password'].invalid" class="mt-20">
+                    <div fxLayout="row">
+                      <mat-icon *ngIf="getErrorMessage('pwd')" class="mr-5">cancel</mat-icon>{{ getErrorMessage("pwd")
+                      }}
+                    </div>
+                  </mat-error>
+                  <button class="btn-password" matSuffix mat-icon-button aria-label="Clear">
+                    <mat-icon *ngIf="!hide" fxFlex="100%" (click)="hide = true">
+                      visibility
+                    </mat-icon>
+                    <mat-icon *ngIf="hide" fxFlex="100%" (click)="hide = false">
+                      visibility_off
+                    </mat-icon>
+                  </button>
+                </mat-form-field>
+              </div>
+            </div>
+
+            <!-- <div fxFlex="100" fxLayout.gt-xs="row" fxLayout.xs="column">
+              <div fxLayout="column" class="no-label" fxFlex.gt-xs="100" fxFlex.xs="100">
+                for full width
+              </div>
+            </div> -->
+
+            <div fxFlex="100" fxLayout.gt-xs="row" fxLayout.xs="column" fxLayoutGap="2%">
+              <div fxLayout="column" class="outline-input no-label" fxFlex.gt-xs="100" fxFlex.xs="100">
+                <div fxLayout="column" class="outline-input no-label">
+                  <label class="small-text">Role Type</label>
+                  <div class="grid-layout-row-wrap-2n">
+                    <div fxLayout="row" fxLayoutGap="20px" fxFlex="100" class="mt-10"
+                      fxLayoutAlign="space-between start">
+                      <mat-radio-group formControlName="role">
+                        <div fxLayout="row" class="radio-first-type p-5 border-radius-8 mr-8" fxFlex="50">
+                          <mat-radio-button value="player"></mat-radio-button>
+                          <div>
+                            <div class="view-bold-lable">Player</div>
+                            <div class="view-light-lable mt-5">
+                              A pellentesque sit amet porttitor eget. Nunc vel risus commodo viverra maecenas.
+                            </div>
+                          </div>
+                        </div>
+                        <div fxLayout="row" class="radio-second-type p-5 border-radius-8" fxFlex="50">
+                          <mat-radio-button value="organiser"></mat-radio-button>
+                          <div>
+                            <div class="view-bold-lable">Organiser</div>
+                            <div class="view-light-lable  mt-5">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+                            </div>
+                          </div>
+                        </div>
+                      </mat-radio-group>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div fxFlex="100" fxLayout.gt-xs="row" fxLayout.xs="column" fxLayoutGap="2%">
+              <div fxLayout="column" fxFlex.gt-xs="49" fxFlex.xs="100" *ngIf="signupForm.value.role == 'organiser'">
+                <mat-form-field>
+                  <mat-label>Organisation Name</mat-label>
+                  <input matInput formControlName="orgName" placeholder="Enter Organisation Name" />
+                </mat-form-field>
+              </div>
+              <div fxLayout="column" fxFlex.gt-xs="49" fxFlex.xs="100" *ngIf="signupForm.value.role == 'organiser'">
+                <mat-form-field>
+                  <mat-label>Organisation Phone</mat-label>
+                  <input matInput formControlName="orgPhone" placeholder="Enter Organisation Phone" />
+                </mat-form-field>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <button class="large-primary-button full-width">
+          {{ "Proceed" }}
+        </button>
+      </div>
+      <div class="full-width mt-10" fxLayoutAlign="start center">
+        <p>
+          <span class="">Already have an account?</span>
+          <span class="primary-text cursor-pointer bold" (click)="login()">&nbsp;Login</span>
+        </p>
+      </div>
+    </form>
+  </div>
+</div>

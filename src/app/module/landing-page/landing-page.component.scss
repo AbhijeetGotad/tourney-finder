@@ -1,0 +1,35 @@
+.floting-object {
+  position: fixed;
+  right: 0;
+  top: 75%;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.floting-object .help-support {
+  padding: 10px;
+  background-color: #E5F7EE;
+  border-radius: 10px 0 0 10px;
+  height: 150px;
+  width: 10px;
+}
+
+.floting-object .help-support .text-rotate {
+  transform: rotate(-90deg);
+  position: relative;
+  top: 110px;
+  color: var(--global-black);
+  font-weight: 500;
+}
+
+.floting-object .help-support .info-icon-rotate {
+  position: absolute;
+  right: 24px;
+}
+
+@media only screen and (min-width: 1280px) and (max-width: 1920px) {
+  .parent-container {
+    width: 99%;
+    margin: 0 auto;
+  }
+}

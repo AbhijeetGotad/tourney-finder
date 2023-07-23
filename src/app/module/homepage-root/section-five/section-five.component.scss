@@ -1,0 +1,34 @@
+.section-three-parent {
+  background-color: --white;
+}
+
+.section-three-page .white-card {
+  display: block;
+  position: relative;
+  padding: 0px;
+}
+
+.display-text-title {
+  font-size: var(--font-size-sub-title);
+  color: var(--light-primary-grey-100);
+  font-weight: 700;
+}
+
+.increased-size-weight {
+  font-size: 80px;
+  font-weight: 900;
+  color: var(--light-midnight-violet-40);
+}
+
+.display-text-sub-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: initial;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-weight: 500;
+  line-height: 24px;
+  min-height: 90px;
+  font-size: var(--font-size-sub-title);
+}

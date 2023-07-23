@@ -1,0 +1,88 @@
+<div class="left-submenu-container">
+    <mat-drawer-container autosize>
+      <mat-drawer #drawer [mode]="'side'" [opened]="true">
+        <mat-nav-list class="scrollable-content">
+          <div fxLayout="row" fxLayoutAlign="space-between center" class="mat-nav-heading mb-10">
+            <div class="sub-title-text ml-12" *ngIf="!searchOn">Games List</div>
+            <div *ngIf="!searchOn" (click)="searchOn = true">
+              <!-- <img src="assets/images/svg/filter-blue-ico.svg" class="ico-extra-small mr-12" alt="" /> -->
+              <mat-icon aria-hidden="true" class="cursor-pointer ico-extra-small mr-12">search</mat-icon>
+            </div>
+  
+            <div fxLayout="row" class="outline-input no-label" *ngIf="searchOn" fxFlex="100"
+              fxLayoutAlign="space-between center">
+              <mat-form-field appearance="outline" fxFlex="85" class="search-box ml-10">
+                <mat-icon matPrefix>search</mat-icon>
+                <input #input type="text" class="bold" matInput placeholder="Search" autocomplete="off" />
+              </mat-form-field>
+              <!-- <div class="resize-btn">
+                <button type="button" mat-flat-button class="secondary-btn"> -->
+              <mat-icon aria-hidden="true" class="cursor-pointer ico-extra-small mr-12"
+                (click)="searchOn = false">close</mat-icon>
+              <!-- </button>
+              </div> -->
+            </div>
+          </div>
+          <mat-list-item *ngFor="let menuItem of menuList; first as isFirst"
+            [ngClass]="menuItem.isActive == 0 ? 'disabled' : ''" fxLayout="row" fxLayoutAlign="start center"
+            class="cursor-pointer">
+            <div>
+              <mat-accordion *ngIf="menuItem.subMenuList.length > 0" multi>
+                <mat-expansion-panel [class.mat-elevation-z0]="true" [expanded]="isFirst">
+                  <mat-expansion-panel-header>
+                    <div fxLayout="row" fxLayoutGap="5px" fxLayoutAlign="start center" class="menuItem-opacity">
+                      <a *ngIf="!menuItem.icon" mat-list-icon [ngClass]="[menuItem.iconImage ? menuItem.iconImage : '']"
+                        class="mr-5"></a>
+                      <span class="bold text-ellipsis" matTooltip="{{ menuItem.displayName }}" matTooltipPosition="above"
+                        matTooltipClass="tooltip-bg">
+                        {{ menuItem.displayName }}
+                      </span>
+                    </div>
+                  </mat-expansion-panel-header>
+                  <mat-nav-list>
+                    <mat-list-item *ngFor="
+                        let submenuItem of menuItem.subMenuList;
+                        let i = index
+                      " (click)="gotoSubMenuLink(submenuItem)" fxLayout="row" fxLayoutAlign="start center"
+                      routerLinkActive="active-nav-item" [routerLinkActiveOptions]="{ exact: true }" [ngClass]="
+                        submenuItem.isActive == 0
+                          ? 'disabled'
+                          : 'active-nav-item'
+                      ">
+                      <div fxLayout="row" fxLayoutGap="5px" class="menuItem-opacity" [ngClass]="
+                          submenuItem?.subname == 'getting-started' &&
+                          i == 0 &&
+                          stage == 3
+                            ? 'disabled'
+                            : ''
+                        ">
+                        <a mat-list-icon [ngClass]="[
+                            submenuItem?.subiconImage
+                              ? submenuItem?.subiconImage
+                              : ''
+                          ]">
+                        </a>
+                        <span class="bold">{{ submenuItem.subDisplayName }}
+                        </span>
+                      </div>
+                    </mat-list-item>
+                  </mat-nav-list>
+                </mat-expansion-panel>
+              </mat-accordion>
+            </div>
+            <div fxLayout="row" fxLayoutGap="5px" fxLayoutAlign="start center" *ngIf="menuItem.subMenuList.length <= 0"
+              [ngClass]="selectedGame.displayName == menuItem.displayName? 'active-game-tab menuItem-opacity':'menuItem-opacity'"
+              (click)="navigate(menuItem)">
+              <img class="sidebar-ico-img" [src]="menuItem.iconImage" alt="sidenav-img">
+              <span class="bold"> {{ menuItem.displayName }} </span>
+            </div>
+          </mat-list-item>
+        </mat-nav-list>
+      </mat-drawer>
+      <mat-drawer-content id="matDrawerContent">
+        <mat-card class="main-root scrollable-content">
+          <router-outlet></router-outlet>
+        </mat-card>
+      </mat-drawer-content>
+    </mat-drawer-container>
+  </div>

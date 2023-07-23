@@ -1,0 +1,48 @@
+<div class="footer white-text mini-text" fxLayout="row" fxLayoutAlign="center center"
+  *ngIf="!homePageService.loggedPage">
+  <div class="no-margin inner-content" fxLayout.gt-xs="row" fxLayout.lt-xs="column"
+    fxLayoutAlign.gt-xs="space-between center" fxLayoutAlign.lt-xs="center center">
+    <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="16px">
+      <img src="assets/images/games-registry.png" alt="copy-right" class="ico-medium" />
+      <div class="copy-right-text">
+        {{footerDetail || '-'}}
+      </div>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="8px">
+      <div class="image-container">
+        <div class="image-gmail"></div>
+      </div>
+      <div class="image-container">
+        <div class="image-facebook"></div>
+      </div>
+      <div class="image-container">
+        <div class="image-facebook-messenger"></div>
+      </div>
+      <div class="image-container">
+        <div class="image-whatsapp"></div>
+      </div>
+      <div class="image-container">
+        <div class="image-instagram"></div>
+      </div>
+      <div class="image-container">
+        <div class="image-pinterest"></div>
+      </div>
+      <div class="image-container">
+        <div class="image-youtube"></div>
+      </div>
+      <div class="image-container">
+        <div class="image-linkedin"></div>
+      </div>
+      <div class="image-container">
+        <div class="image-twitter"></div>
+      </div>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="8px" class="copy-right-text">
+      <div class="cursor-pointer">Regulatory</div>
+      <div>|</div>
+      <div class="cursor-pointer">Policies</div>
+      <div>|</div>
+      <div class="cursor-pointer">Terms &amp; Conditions</div>
+    </div>
+  </div>
+</div>

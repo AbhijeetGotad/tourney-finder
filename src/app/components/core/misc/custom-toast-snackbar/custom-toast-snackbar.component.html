@@ -1,0 +1,11 @@
+<div fxLayout="column">
+  <div fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="space-between center">
+    <!-- <mat-icon *ngIf="matIcon">{{matIcon}}</mat-icon> -->
+    <div fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="start center">
+      <!-- <p *ngIf="data?.title">{{data.title}}</p> -->
+      <div *ngIf="messageIcon" class="ico-medium" [ngClass]="messageIcon"></div>
+      <p [innerHTML]="data.message"></p>
+    </div>
+    <div class="close-ico ico-extra-small cursor-pointer" (click)="dismiss()"></div>
+  </div>
+</div>

@@ -1,0 +1,69 @@
+.mat-drawer .mat-drawer-inner-container {
+    overflow: hidden !important;
+}
+
+.sidenav-container .mat-list-base .mat-list-item.mat-list-item-with-avatar,
+.sidenav-container .mat-list-base .mat-list-option.mat-list-item-with-avatar {
+    height: auto;
+    padding: 7px 0;
+}
+
+.sidenav-container .mat-list-base .mat-list-item.active-nav-item {
+    font-weight: 500 !important;
+    color: var(--primary-50) !important;
+}
+
+.sidenav-container .mat-list-base .mat-list-item .mat-list-icon.sidebar-ico {
+    height: 32px;
+    width: 32px;
+    font-size: 32px;
+    border-radius: 0;
+    background-repeat: no-repeat;
+    display: inline-block;
+    background-size: 32px;
+    background-position: center;
+    padding: 0;
+}
+
+.sidenav-container .mat-list-base .mat-list-item .menu-text {
+    font-size: var(--font-size-mini);
+    margin-top: 5px;
+}
+
+// .sidenav-container .bottom-side-menu{
+//     margin-top: 40px;
+//     // position: absolute;
+//     // bottom: 10px;
+//     // width: 100%;
+// }
+.home-sidebar-ico {
+    background-image: url(../../../../assets/images/menu-img/home-sidebar.svg);
+}
+
+.sidenav-container .mat-list-item.active-nav-item .home-sidebar-ico {
+    background-image: url(../../../../assets/images/menu-img/home-sidebar-selected.svg);
+}
+
+.leadlist-sidebar-ico {
+    background-image: url(../../../../assets/images/menu-img/employee-sidebar.svg);
+}
+
+.sidenav-container .mat-list-item.active-nav-item .leadlist-sidebar-ico {
+    background-image: url(../../../../assets/images/menu-img/employee-sidebar-selected.svg);
+}
+
+.services-sidebar-ico {
+    background-image: url(../../../../assets/images/menu-img/services-sidebar.svg);
+}
+
+.sidenav-container .mat-list-item.active-nav-item .services-sidebar-ico {
+    background-image: url(../../../../assets/images/menu-img/services-sidebar-selected.svg);
+}
+
+.settings-sidebar-ico {
+    background-image: url(../../../../assets/images/menu-img/settings-sidebar.svg);
+}
+
+.sidenav-container .mat-list-item.active-nav-item .settings-sidebar-ico {
+    background-image: url(../../../../assets/images/menu-img/settings-sidebar-selected.svg);
+}

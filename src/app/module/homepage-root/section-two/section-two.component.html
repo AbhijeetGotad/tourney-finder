@@ -1,0 +1,48 @@
+<div fxLayout="column" class="section-two-page">
+  <div class="text-first text-center">
+    {{ sectionTwoData?.headline || "-" }}
+  </div>
+  <p class="text-third text-center">
+    {{ sectionTwoData?.subHeadline || "-" }}
+  </p>
+  <div fxLayout="row wrap" fxLayout.xs="column" ngClass.xs="grid-layout-column">
+    <div class="carousel">
+      <div class="carousel-container">
+        <div *ngFor="let item of sectionTwoSubData; let index = index" class="carousel-item">
+          <div fxLayout="column" class="white-card">
+            <img class="display-card" [src]="item?.icon" alt="sec-two-icon" />
+            <div fxLayout="column" fxLayoutGap="4px" class="plr-15">
+              <div class="sec-two-title extra-bold mb-8">
+                {{ item?.name || "-" }}
+              </div>
+              <div class="desc-text mb-20">
+                {{ item?.description || "-" }}
+              </div>
+              <div class="mb-20">
+                <button fxLayoutAlign="center center" type="button" class="small-secondary-button">
+                  Know more
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div fxLayout="column" class="white-card">
+      <img class="display-card" [src]="sectionTwoSubData[0]?.icon" alt="sec-two-icon" />
+      <div fxLayout="column" fxLayoutGap="4px" class="plr-15">
+        <div class="sec-two-title extra-bold mb-8">
+          {{ sectionTwoSubData[0]?.name || "-" }}
+        </div>
+        <div class="desc-text mb-20">
+          {{ sectionTwoSubData[0]?.description || "-" }}
+        </div>
+        <div class="mb-20">
+          <button fxLayoutAlign="center center" type="button" class="small-secondary-button">
+            Know more
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

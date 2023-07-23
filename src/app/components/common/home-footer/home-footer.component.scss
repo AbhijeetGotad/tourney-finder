@@ -1,0 +1,143 @@
+.footer {
+  background-color: var(--global-black);
+  height: 65px;
+  padding: 24px 0 25px 0;
+}
+.footer .copy-right-text {
+  font-size: var(--font-size-mini);
+  font-weight: 500;
+  line-height: 16px;
+}
+
+.image-container {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+}
+
+.image-gmail {
+  width: 100%;
+  height: 100%;
+  background-image: url("../../../../assets/images/social-outline-svg/ico-gmail.svg");
+  background-size: cover;
+  filter: invert(100%);
+  transition: background-image 0.3s ease;
+}
+
+.image-gmail:hover {
+  filter: invert(0%);
+  background-image: url("../../../../assets/images/social-svg/ico-gmail.svg");
+}
+
+.image-facebook {
+  width: 100%;
+  height: 100%;
+  background-image: url("../../../../assets/images/social-outline-svg/ico-facebook.svg");
+  background-size: cover;
+  filter: invert(100%);
+  transition: background-image 0.3s ease;
+}
+
+.image-facebook:hover {
+  filter: invert(0%);
+  background-image: url("../../../../assets/images/social-svg/ico-facebook.svg");
+}
+
+.image-facebook-messenger {
+  width: 100%;
+  height: 100%;
+  background-image: url("../../../../assets/images/social-outline-svg/ico-facebook-messenger.svg");
+  background-size: cover;
+  filter: invert(100%);
+  transition: background-image 0.3s ease;
+}
+
+.image-facebook-messenger:hover {
+  filter: invert(0%);
+  background-image: url("../../../../assets/images/social-svg/ico-facebook-messenger.svg");
+}
+
+.image-whatsapp {
+  width: 100%;
+  height: 100%;
+  background-image: url("../../../../assets/images/social-outline-svg/ico-whatsapp.svg");
+  background-size: cover;
+  filter: invert(100%);
+  transition: background-image 0.3s ease;
+}
+
+.image-whatsapp:hover {
+  filter: invert(0%);
+  background-image: url("../../../../assets/images/social-svg/ico-whatsapp.svg");
+}
+
+.image-instagram {
+  width: 100%;
+  height: 100%;
+  background-image: url("../../../../assets/images/social-outline-svg/ico-instagram.svg");
+  background-size: cover;
+  filter: invert(100%);
+  transition: background-image 0.3s ease;
+}
+
+.image-instagram:hover {
+  filter: invert(0%);
+  background-image: url("../../../../assets/images/social-svg/ico-instagram.svg");
+}
+
+.image-pinterest {
+  width: 100%;
+  height: 100%;
+  background-image: url("../../../../assets/images/social-outline-svg/ico-pinterest.svg");
+  background-size: cover;
+  filter: invert(100%);
+  transition: background-image 0.3s ease;
+}
+
+.image-pinterest:hover {
+  filter: invert(0%);
+  background-image: url("../../../../assets/images/social-svg/ico-pinterest.svg");
+}
+
+.image-youtube {
+  width: 100%;
+  height: 100%;
+  background-image: url("../../../../assets/images/social-outline-svg/ico-youtube.svg");
+  background-size: cover;
+  filter: invert(100%);
+  transition: background-image 0.3s ease;
+}
+
+.image-youtube:hover {
+  filter: invert(0%);
+  background-image: url("../../../../assets/images/social-svg/ico-youtube.svg");
+}
+
+.image-linkedin {
+  width: 100%;
+  height: 100%;
+  background-image: url("../../../../assets/images/social-outline-svg/ico-linkedin.svg");
+  background-size: cover;
+  filter: invert(100%);
+  transition: background-image 0.3s ease;
+}
+
+.image-linkedin:hover {
+  filter: invert(0%);
+  background-image: url("../../../../assets/images/social-svg/ico-linkedin.svg");
+}
+
+.image-twitter {
+  width: 100%;
+  height: 100%;
+  background-image: url("../../../../assets/images/social-outline-svg/ico-twitter.svg");
+  background-size: cover;
+  filter: invert(100%);
+  transition: background-image 0.3s ease;
+}
+
+.image-twitter:hover {
+  filter: invert(0%);
+  background-image: url("../../../../assets/images/social-svg/ico-twitter.svg");
+}

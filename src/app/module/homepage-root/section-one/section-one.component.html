@@ -1,0 +1,37 @@
+<div fxLayout="column" class="parent-telephony-section-one grid-layout-column">
+  <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-around center" fxLayoutGap="50px" fxLayoutGap.xs="20px">
+    <div fxlayout="column" class="cloud-telephony-section-two">
+      <div class="carousel">
+        <div class="carousel-container">
+          <div class="carousel-item">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxl52CcLimgzKTqphsYmAbBogJZzK-hUkirA&usqp=CAU"
+              alt="Image 1">
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://thumbs.dreamstime.com/b/bmw-logo-editorial-illustrative-white-background-logo-icon-vector-logos-icons-set-social-media-flat-banner-vectors-svg-eps-jpg-210442341.jpg"
+              alt="Image 2">
+          </div>
+          <div class="carousel-item">
+            <img src="https://cdn.freebiesupply.com/images/thumbs/2x/google-logo.png" alt="Image 3">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div fxLayout="column" fxLayoutAlign="start start">
+      <div class="header-title-1">{{title1}}</div>
+      <div class="header-title-2">{{title2}}</div>
+      <div class="header-title-3" *ngIf="title3">{{title3}}</div>
+      <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="20px" fxLayoutGap.xs="10px" fxLayoutAlign="start center"
+        fxLayoutAlign.xs="center center" class="mt-48">
+        <button class="extra-large-secondary-button" (click)="login()">
+          Login
+        </button>
+        <button class="extra-large-primary-button" (click)="signUp()">
+          Sign Up Now
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

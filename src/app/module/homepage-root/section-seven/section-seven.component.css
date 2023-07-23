@@ -1,0 +1,43 @@
+.section-six-page .header-title {
+  font-weight: 900;
+  font-size: 56px;
+  line-height: 64px;
+  text-align: center;
+  color: var(--black);
+}
+
+.section-six-page .header-sub-title {
+  text-align: center;
+  font-size: var(--font-size-title);
+  width: 64%;
+  margin: 0 auto;
+  color: var(--light-primary-grey-80);
+  line-height: 24px;
+  font-weight: 500;
+}
+.section-six-page .container {
+  background-color: var(--light-primary-grey-20);
+}
+
+.section-six-page .primary-btn {
+  outline: none;
+  line-height: 56px !important;
+  height: 56px;
+  padding: 0 24px;
+  border-radius: 75px !important;
+}
+.section-six-page .mt-64 {
+  margin-top: 48px;
+}
+.outbound-root .section-six-page .mt-48 {
+  margin-top: 48px;
+}
+
+@media only screen and (max-width: 599px) {
+  .section-six-page .header-sub-title {
+    width: 95%;
+  }
+  .section-six-page .header-title {
+    font-size: 1.87em;
+  }
+}

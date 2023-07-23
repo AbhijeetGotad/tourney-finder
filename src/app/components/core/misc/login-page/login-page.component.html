@@ -1,0 +1,70 @@
+<div fxLayout="column" fxLayoutAlign="space-between none" class="upload-audio-root">
+  <div fxLayout="row" fxLayoutAlign="space-between center" class="grid-layout-row header-modal-action">
+    <h2 mat-dialog-title class="no-margin header">Login</h2>
+    <mat-icon mat-dialog-close class="cursor-pointer ico-small">close</mat-icon>
+  </div>
+  <div class="content-modal-action bottom-container">
+    <form fxLayout="column" [formGroup]="logformdata" fxLayoutGap="24px">
+      <div class="heading-section mb-20 mt-10" fxLayoutAlign="center center">
+        <h1 class="extra-bolder heading no-margin" *ngIf="!signup.isSignUp">
+          Hi there, Welcome back
+        </h1>
+      </div>
+
+      <div class="bottom-container" fxFlex fxLayout="column" fxLayoutAlign="flex-start flex-start" fxLayoutGap="30px">
+        <div fxLayout="column" class="bottom-container">
+          <mat-form-field>
+            <mat-label>Enter Email ID</mat-label>
+            <input matInput formControlName="userName" autocomplete="off" (keyup)="clearError()"
+              placeholder="Enter Email ID" />
+            <mat-error *ngIf="logformdata.controls['userName'].invalid" class="mt-20">
+              <div fxLayout="row">
+                <mat-icon *ngIf="getErrorMessage('email')" class="mr-5">cancel</mat-icon>
+                <p>{{ getErrorMessage("email") }}</p>
+              </div>
+            </mat-error>
+          </mat-form-field>
+
+
+          <mat-form-field>
+            <mat-label>Password</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'" formControlName="password" (keyup)="clearError()"
+              autocomplete="off" />
+            <mat-error *ngIf="logformdata.controls['password'].invalid" class="mt-20">
+              <div fxLayout="row">
+                <mat-icon *ngIf="getErrorMessage('pwd')" class="mr-5">cancel</mat-icon>{{ getErrorMessage("pwd")
+                }}
+              </div>
+            </mat-error>
+            <button class="btn-password" matSuffix mat-icon-button aria-label="Clear">
+              <mat-icon *ngIf="!hide" fxFlex="100%" (click)="hide = true">
+                visibility
+              </mat-icon>
+              <mat-icon *ngIf="hide" fxFlex="100%" (click)="hide = false">
+                visibility_off
+              </mat-icon>
+            </button>
+          </mat-form-field>
+          <span *ngIf="error_message" class="error-text mini-text mb-5">
+            <mat-icon *ngIf="error_message" class="ico-mini mr-5">cancel</mat-icon>
+            <span> {{ error_message }}</span>
+          </span>
+          <p fxFlex="100%" class="mt-10" fxLayoutAlign="flex-end flex-end" *ngIf="logformdata.value.userName">
+            <span class="primary-text cursor-pointer bold" [routerLink]="['/forget-password']">
+              Forgot password?</span>
+          </p>
+        </div>
+
+        <button class="large-primary-button full-width" [disabled]="!logformdata.valid" (click)="generateKeyPair()">
+          {{ "Proceed" }}
+        </button>
+      </div>
+      <div class="full-width mt-15 mb-10" fxLayoutAlign="start center">
+        <p>
+          <span class="">Don't have an account?</span>
+          <span class="primary-text cursor-pointer bold" (click)="signUp()">&nbsp;Sign up</span>
+        </p>
+      </div>
+    </form>
+  </div>
+</div>

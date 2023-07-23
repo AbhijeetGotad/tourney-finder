@@ -1,0 +1,124 @@
+<div class="outside-close-icon" mat-dialog-close></div>
+<div class="outside-text">Add New Competition</div>
+<div fxLayout="row" fxLayoutGap="10">
+    <div fxLayout="column" fxFlex="33" class="tile-add">
+        <div class="attach-drag-drop-competition cursor-pointer" (click)="fileDropRef?.click()"
+            *ngIf="choosenFiles.length == 0">
+            <div [style.max-width.px]="dragMaxWidth">
+                <div fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="center center" class="drag-drop-container">
+                    <button type="button" mat-icon-button class="upload-ico"></button>
+                    <span>Please upload front page of your template</span>
+                    <input type="file" class="hidden" [multiple]="multiple" (change)="checkFormats($event, false)"
+                        #fileDropRef />
+                </div>
+            </div>
+        </div>
+        <div class="drag-drop-container" fxFlex="100" *ngIf="choosenFiles.length != 0" fxLayout="column"
+            fxLayoutAlign="start center">
+            <button (click)="deleteFile(choosenFiles[0])" class="small-tertiary-button mb-5">Delete</button>
+            <div class="cover" fxLayoutAlign="center center">
+                <img class="cover-image" [src]="imageUrls[0]" alt="uploaded-img">
+            </div>
+        </div>
+    </div>
+    <div fxLayout="column" fxFlex="33" class="tile-add">
+        <div class="attach-drag-drop-competition cursor-pointer" (click)="fileDropRef?.click()"
+            *ngIf="choosenFiles.length < 2">
+            <div [style.max-width.px]="dragMaxWidth">
+                <div fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="center center" class="drag-drop-container">
+                    <button type="button" mat-icon-button class="upload-ico"></button>
+                    <span>Please upload back page of your template</span>
+                    <input type="file" class="hidden" [multiple]="multiple" (change)="checkFormats($event, false)"
+                        #fileDropRef />
+                </div>
+            </div>
+        </div>
+        <div class="drag-drop-container" fxFlex="100" *ngIf="choosenFiles.length >= 1" fxLayout="column"
+            fxLayoutAlign="start center">
+            <button (click)="deleteFile(choosenFiles[1])" class="small-tertiary-button mb-5">Delete</button>
+            <div class="cover" fxLayoutAlign="center center">
+                <img class="cover-image" [src]="imageUrls[1]" alt="uploaded-img">
+            </div>
+        </div>
+    </div>
+    <mat-card fxLayout="column" fxFlex="33" class="tile-add">
+        <div fxLayout="column" fxFlex="100">
+            <form fxLayoutAlign="start stretch" fxLayout="column" class="grid-layout-column" fxLayoutGap="10px"
+                fxFlex="100">
+                <div fxLayout="column" class="outline-input no-label">
+                    <label class="primary-text small-text mb-5">Title<span class="error-text">*</span></label>
+                    <mat-form-field appearance="outline" fxFlex="100">
+                        <input matInput placeholder="Enter Title" maxlength="100">
+                    </mat-form-field>
+                </div>
+                <div fxLayout="column" class="outline-input no-label">
+                    <label class="primary-text small-text mb-5">Description<span class="error-text">*</span></label>
+                    <mat-form-field fxFlex="100" appearance="outline">
+                        <textarea placeholder="Enter Description" matInput maxlength="100" name="" id="" cols="30"
+                            rows="5"></textarea>
+                    </mat-form-field>
+                </div>
+                <div fxLayout="column" class="outline-input no-label">
+                    <label class="primary-text small-text mb-5">Venue<span class="error-text">*</span></label>
+                    <mat-form-field appearance="outline" fxFlex="100">
+                        <input matInput placeholder="Enter Venue" maxlength="100">
+                    </mat-form-field>
+                </div>
+                <div fxLayout="row" class="outline-input no-label">
+                    <div fxLayout="column" class="mr-5">
+                        <label class="primary-text small-text mb-5">Entry Fee<span class="error-text">*</span></label>
+                        <mat-form-field fxFlex="100" appearance="outline">
+                            <input matInput placeholder="Enter Entry Fee" maxlength="100">
+                        </mat-form-field>
+                    </div>
+                    <div fxLayout="column">
+                        <label class="primary-text small-text mb-5">Winning Price<span
+                                class="error-text">*</span></label>
+                        <mat-form-field fxFlex="100" appearance="outline">
+                            <input matInput placeholder="Enter Winning Price" maxlength="100">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxLayout="row" class="outline-input no-label">
+                    <div fxLayout="column" class="mr-5">
+                        <label class="primary-text small-text mb-5">Registration Start Date & Time<span
+                                class="error-text">*</span></label>
+                        <mat-form-field fxFlex="100" appearance="outline">
+                            <input matInput placeholder="Select" maxlength="100">
+                        </mat-form-field>
+                    </div>
+                    <div fxLayout="column">
+                        <label class="primary-text small-text mb-5">Registration End Date & Time<span
+                                class="error-text">*</span></label>
+                        <mat-form-field fxFlex="100" appearance="outline">
+                            <input matInput placeholder="Select" maxlength="100">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxLayout="row" class="outline-input no-label">
+                    <div fxLayout="column" class="mr-5">
+                        <label class="primary-text small-text mb-5">Competition Start Date & Time<span
+                                class="error-text">*</span></label>
+                        <mat-form-field fxFlex="100" appearance="outline">
+                            <input matInput placeholder="Select" maxlength="100">
+                        </mat-form-field>
+                    </div>
+                    <div fxLayout="column">
+                        <label class="primary-text small-text mb-5">Competition End Date & Time<span
+                                class="error-text">*</span></label>
+                        <mat-form-field fxFlex="100" appearance="outline">
+                            <input matInput placeholder="Select" maxlength="100">
+                        </mat-form-field>
+                    </div>
+                </div>
+            </form>
+
+            <div fxLayout="row" fxLayoutAlign="end end" class="action-btn-row modal-footer separator-top p-10">
+                <button class="small-tertiary-button">Reset</button>
+                <button class="small-primary-button" type="submit">
+                    Submit
+                </button>
+            </div>
+        </div>
+    </mat-card>
+</div>

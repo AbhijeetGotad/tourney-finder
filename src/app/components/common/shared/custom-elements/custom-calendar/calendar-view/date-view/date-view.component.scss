@@ -1,0 +1,25 @@
+table {
+    border-collapse: collapse;
+
+    .week-day {
+        padding-bottom: 12px;
+        color: var(--light-text-grey-80);
+    }
+
+    .date-btn-container {
+        width: 48px;
+        height: 48px;
+
+        .date-btn {
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+
+            &.today-date,
+            &.date-between {
+                border-color: var(--light-primary-60);
+                background-color: var(--light-primary-20);
+            }
+        }
+    }
+}

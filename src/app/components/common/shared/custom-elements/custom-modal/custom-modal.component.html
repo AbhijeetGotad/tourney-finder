@@ -1,0 +1,24 @@
+<ng-container *ngIf="isModalOpen">
+    <div class="custom-modal-wrapper">
+        <div class="overlay"></div>
+        <div class="modal-container {{ className }}">
+            <div class="modal-header-container">
+                <div
+                    *ngIf="isClosable"
+                    class="modal-close-icon-btn"
+                    (click)="closeModal()"
+                >
+                    <img
+                        src="assets/icons/close.svg"
+                        alt="close-btn-icon"
+                        class="close-btn-icon"
+                    />
+                </div>
+            </div>
+
+            <div class="modal-body-container">
+                <ng-content select="[content]"></ng-content>
+            </div>
+        </div>
+    </div>
+</ng-container>

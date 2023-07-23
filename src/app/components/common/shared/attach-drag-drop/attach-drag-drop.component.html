@@ -1,0 +1,24 @@
+<div class="attach-drag-drop cursor-pointer" (click)="fileDropRef?.click()"
+  *ngIf="multiple && !viewOnly || !multiple && !viewOnly && choosenFiles.length == 0">
+  <div [style.max-width.px]="dragMaxWidth">
+    <div fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="center center" class="drag-drop-container">
+      <button type="button" mat-icon-button class="upload-ico"></button>
+      <span>{{ attachmentText }}</span>
+      <input type="file" class="hidden" [multiple]="multiple" (change)="checkFormats($event, false)" #fileDropRef />
+    </div>
+  </div>
+</div>
+
+<div fxLayout="row wrap" fxLayoutGap="15px" class="attach-drag-drop">
+  <div class="mb-5" *ngFor="let file of choosenFiles; let i = index">
+    <div fxLayout="row" fxLayoutGap="30px" class="attached-file-wrapper">
+      <div *ngIf="file?.name" class="word-break-all">{{ file.name }}</div>
+      <div *ngIf="!file.name" class="word-break-all">{{ file }}</div>
+      <div fxLayout="row" fxLayoutGap="10px">
+        <img src="assets/images/svg/view-ico.svg" class="ico-extra-small cursor-pointer" (click)="emitViewEvent(i)" />
+        <img *ngIf="!viewOnly" src="assets/images/svg/delete-ico.svg" class="ico-extra-small cursor-pointer"
+          (click)="deleteFile(file)" />
+      </div>
+    </div>
+  </div>
+</div>

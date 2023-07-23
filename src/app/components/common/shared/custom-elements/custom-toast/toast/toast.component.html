@@ -1,0 +1,16 @@
+<div class="toast-container {{ position }}">
+    <div class="toast-backdrop">
+        <div class="toast-message-container" [ngStyle]="toastStyles">
+            <div class="toast-message">
+                <div class="toast-icon">
+                    <img alt="toast-icon" [src]="kindIconMap[kind]" class="{{ kind }}" />
+                </div>
+
+                <div class="toast-title-description-container">
+                    <div class="toast-title">{{ title }}</div>
+                    <div class="toast-description">{{ description }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

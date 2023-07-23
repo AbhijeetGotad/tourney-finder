@@ -1,0 +1,55 @@
+.attach-drag-drop .drag-drop-container {
+  background: var(--global-white) 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 6px var(--box-shadow-color);
+  border: 1px dashed var(--grey-60);
+  border-radius: 10px;
+  height: 70px;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+.attach-drag-drop .drag-drop-container button.upload-ico {
+  background-image: url("../../../../../assets/images/svg/dragdrop-upload-ico.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  border-radius: 0;
+}
+
+/* .attach-drag-drop .attached-file {
+    position: relative;
+    width: 170px;
+    height: 115px;
+}
+.attach-drag-drop .attached-file-name {
+    width: 170px;
+    text-align: center;
+    word-break: break-word;
+}
+.attach-drag-drop .attached-file .on-hover-btn {
+    position: absolute;
+    display: none;
+}
+.attach-drag-drop .attached-file .on-hover-btn button {
+    width: 90px;
+    height: auto;
+}
+.attach-drag-drop .attached-file:hover .attached-file-preview {
+    opacity: 0.5;
+}
+.attach-drag-drop .attached-file:hover .on-hover-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
+} */
+.attach-drag-drop .attached-file-wrapper {
+  border: 1px solid var(--grey-60);
+  border-radius: 40px;
+  padding: 10px;
+  background: var(--global-white);
+}

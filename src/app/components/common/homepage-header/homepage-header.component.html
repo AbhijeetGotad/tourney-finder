@@ -1,0 +1,65 @@
+<div fxLayout="column" class="parent-header" *ngIf="!homePageSer.loggedPage">
+  <div fxLayout="row" fxLayoutAlign="space-between center" class="inner-content grid-layout-row">
+    <div class="branding-col" href="#">
+      <div fxLayout="row" fxLayoutGap="4px" fxLayoutAlign="center center" class="cursor-pointer"
+        (click)="routeToHome()">
+        <div>
+          <img src="assets/images/games-registry.png" alt="Logo" class="ico-medium" />
+        </div>
+        <div class="logo-text">TourneyFinder</div>
+      </div>
+    </div>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start center" [ngClass.gt-xs]="{ 'grid-layout-row ': true }"
+      [ngClass.xs]="{ 'grid-layout-column ': true }">
+      <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center center" class="login_ui" fxLayoutGap="16px">
+        <div>
+          <button type="button" class="large-tertiary-button" (click)="loginUser()">
+            Login
+          </button>
+        </div>
+        <div>
+          <button type="button" class="large-primary-button" (click)="signupUser()">
+            Sign Up
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="bg-wrapper"></div>
+
+<!-- login and portal header -->
+<div class="header-wrapper" fxLayout="row" fxLayoutGap="20px" fxLayoutAlign="space-between center"
+  *ngIf="homePageSer.loggedPage">
+  <div class="branding-col ml-24" fxLayout="row">
+    <div fxLayout="row" fxLayoutGap="8px" fxLayoutAlign="start center">
+      <div class="cursor-pointer" (click)="routeToHome()">
+        <img src="assets/images/games-registry.png" alt="Logo" class="ico-logo ico-medium" />
+      </div>
+      <div class="logo-text cursor-pointer" (click)="routeToHome()">
+        TourneyFinder
+      </div>
+    </div>
+  </div>
+  <div fxLayout="row" fxLayoutAlign="flex-end center" class="actions-wrapper mr-24 mb-12" *ngIf="loginUserSer.sessionLogin">
+    <!-- <div class="mr-12">
+      <mat-icon class="ico-small ico-white-color">search</mat-icon>
+    </div> -->
+    <!-- <div class="btn-notification mr-12">
+      <img src="assets/images/svg/notification-ico.svg" alt="notification" class="cursor-pointer ico-small" />
+    </div> -->
+    <!-- <div class="mr-16">
+      <button type="button" mat-flat-button class="white-outline-btn">
+        Help
+      </button>
+    </div> -->
+    <div>
+      <img src="assets/images/avatar.png" alt="avatar" class="cursor-pointer ico-medium"
+        [matMenuTriggerFor]="beforeMenu" />
+      <mat-menu #beforeMenu="matMenu" xPosition="before">
+        <button mat-menu-item>{{ loginUserSer.email }}</button>
+        <button mat-menu-item (click)="logoutUser()">Logout</button>
+      </mat-menu>
+    </div>
+  </div>
+</div>

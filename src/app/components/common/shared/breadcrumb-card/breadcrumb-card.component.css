@@ -1,0 +1,44 @@
+ul.breadcrumb {
+    padding: 0 0 9px 0;
+    list-style: none;
+    color: var(--primary-50);
+    font-size: var(--font-size-small);
+}
+ul.breadcrumb li {
+    display: inline;
+    cursor: pointer;
+}
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    content: "\003e";
+}
+
+@media only screen and (max-width: 599px) {
+    ul.breadcrumb {
+        margin-top: -1px;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1279px) {
+    ul.breadcrumb {
+        margin-top: -10px;
+    }
+}
+
+@media only screen and (min-width: 1280px) and (max-width: 1439px) {
+    ul.breadcrumb {
+        margin-top: -28px;
+    }
+}
+
+@media only screen and (min-width: 1440px) and (max-width: 1919px) {
+    ul.breadcrumb {
+        margin-top: -32px;
+    }
+}
+  
+@media only screen and (min-width: 1920px) {
+    ul.breadcrumb {
+        margin-top: -37px;
+    }
+}

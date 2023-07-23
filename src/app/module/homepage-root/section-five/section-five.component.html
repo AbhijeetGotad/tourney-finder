@@ -1,0 +1,22 @@
+<div fxLayout="column" class="section-four-page grid-layout-column">
+  <div fxLayout="column" class="grid-layout-column">
+    <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="stretch stretch" ngClass.xs="grid-layout-column"
+      ngClass.gt-xs="grid-layout-row-wrap-4n">
+      <div *ngFor="let item of dataCount; let index = index">
+        <div class="white-card" fxLayout="column" fxLayoutGap="10px">
+          <div fxLayout="column" class="plr-15">
+            <div class="increased-size-weight">
+              {{ item.count || "-" }}
+            </div>
+            <div class="display-text-title small-text">
+              {{ item.name || "-" }}
+            </div>
+            <div class="display-text-sub-title">
+              {{ item.description || "-" }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

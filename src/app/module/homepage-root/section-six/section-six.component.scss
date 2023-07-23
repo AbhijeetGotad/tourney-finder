@@ -1,0 +1,55 @@
+.section-five-page .header-title {
+  font-weight: 900;
+  font-size: 40px;
+  margin: 0 auto;
+  color: var(--light-primary-80);
+  line-height: 40px;
+  margin-bottom: 48px;
+}
+
+.section-five-page .main-accordion {
+  background-color: var(--white);
+}
+
+.section-five-page .example-accordion {
+  display: block;
+  background-color: var(--white);
+  margin: auto;
+}
+
+.section-five-page .example-accordion-item {
+  display: block;
+}
+
+.section-five-page .example-accordion-item-description {
+  font-size: var(--font-size-head);
+  color: var(--black);
+  height: 24px;
+  width: 24px;
+}
+
+.section-five-page .example-accordion-item-header {
+  padding: 29px 28px;
+  font-size: var(--font-size-head);
+  // font-weight: 500;
+  color: var(--light-primary-grey-100);
+}
+
+.section-five-page .example-accordion-item-body {
+  font-size: var(--font-size-title);
+  line-height: 24px;
+  font-weight: 500;
+  color: var(--light-primary-grey-80);
+  padding: 16px;
+}
+
+.section-five-page .example-accordion-item-header:hover {
+  cursor: pointer;
+  background-color: #eee;
+}
+.home-root .section-five-page .example-accordion .separator-top {
+  border-top: 1px solid var(--light-primary-grey-40);
+}
+// .section-five-page .mb-48 {
+//   margin-bottom: 48px;
+// }

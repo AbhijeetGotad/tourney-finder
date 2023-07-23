@@ -1,0 +1,63 @@
+<div
+    #dropdownContainer
+    [class]="'cstm-dropdown__container ' + className"
+    [ngClass]="{ disabled: disabled, open: isOpen }"
+>
+    <div class="cstm-dropdown__label" *ngIf="label">{{ label }}</div>
+    <label
+        class="cstm-dropdown__select-container"
+        (click)="openDropdown()"
+        role="select"
+    >
+        <div
+            class="cstm-dropdown__select"
+            [ngClass]="{ placeholder: !value && placeholder }"
+        >
+            {{ selectedLabel || placeholder }}
+        </div>
+        <img
+            class="cstm-dropdown__icon"
+            alt="Chevron"
+            [src]="
+                isOpen
+                    ? 'assets/icons/chevron-up.svg'
+                    : 'assets/icons/chevron-down.svg'
+            "
+        />
+    </label>
+
+    <ng-container *ngIf="isOpen">
+        <div class="cstm-dropdown__list" #dropdownOptions>
+            <ng-container *ngFor="let option of options">
+                <div
+                    class="cstm-dropdown__option"
+                    (click)="onOptionClick(option)"
+                    role="option"
+                    [ngClass]="{
+                        disabled: option.disable,
+                        divider: option.divider,
+                        active: option.value === value
+                    }"
+                >
+                    <img
+                        class="csmt-option__icon"
+                        *ngIf="option?.icon"
+                        [src]="option.icon"
+                        [alt]="option.label"
+                    />
+                    <div class="cstm-option__label-container">
+                        <div class="cstm-dropdown__option-label">
+                            {{ option.label }}
+                        </div>
+                        <div
+                            *ngIf="option.helper"
+                            class="cstm-dropdown__option-helper"
+                        >
+                            {{ option.helper }}
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </ng-container>
+</div>
